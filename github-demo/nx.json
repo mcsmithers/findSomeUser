@@ -13,6 +13,9 @@
     },
     "github-demo-e2e": {
       "tags": []
+    },
+    "libs-material": {
+      "tags": []
     }
   }
 }
