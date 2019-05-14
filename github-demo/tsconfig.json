@@ -15,7 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@github-demo/libs/material": ["libs/libs/material/src/index.ts"]
+      "@github-demo/libs/material": ["libs/libs/material/src/index.ts"],
+      "@github-demo/core-data": ["libs/core-data/src/index.ts"],
+      "@github-demo/ui-searchform": ["libs/ui-searchform/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
