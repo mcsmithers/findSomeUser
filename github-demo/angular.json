@@ -1,0 +1,134 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "",
+  "projects": {
+    "github-demo": {
+      "root": "apps/github-demo/",
+      "sourceRoot": "apps/github-demo/src",
+      "projectType": "application",
+      "prefix": "github-demo",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/github-demo",
+            "index": "apps/github-demo/src/index.html",
+            "main": "apps/github-demo/src/main.ts",
+            "polyfills": "apps/github-demo/src/polyfills.ts",
+            "tsConfig": "apps/github-demo/tsconfig.app.json",
+            "assets": [
+              "apps/github-demo/src/favicon.ico",
+              "apps/github-demo/src/assets"
+            ],
+            "styles": ["apps/github-demo/src/styles.css"],
+            "scripts": [],
+            "es5BrowserSupport": true
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/github-demo/src/environments/environment.ts",
+                  "with": "apps/github-demo/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "github-demo:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "github-demo:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "github-demo:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/github-demo/tsconfig.app.json",
+              "apps/github-demo/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "apps/github-demo/jest.config.js",
+            "tsConfig": "apps/github-demo/tsconfig.spec.json",
+            "setupFile": "apps/github-demo/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "github-demo-e2e": {
+      "root": "apps/github-demo-e2e",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/builders:cypress",
+          "options": {
+            "cypressConfig": "apps/github-demo-e2e/cypress.json",
+            "tsConfig": "apps/github-demo-e2e/tsconfig.e2e.json",
+            "devServerTarget": "github-demo:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "github-demo:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/github-demo-e2e/tsconfig.e2e.json",
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "warnings": {
+      "typescriptMismatch": false,
+      "versionMismatch": false
+    },
+    "defaultCollection": "@nrwl/schematics"
+  },
+  "schematics": {
+    "@nrwl/schematics:application": {
+      "framework": "angular"
+    }
+  },
+  "defaultProject": "github-demo"
+}
