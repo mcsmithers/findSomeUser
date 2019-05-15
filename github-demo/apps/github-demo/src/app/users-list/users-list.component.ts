@@ -22,8 +22,13 @@ export class UsersListComponent implements OnInit {
     console.log(user);
   }
 
+  searchUsers(user){
+    console.log('looking for user... ', user);
+  }
+
   getUsers() {
-    this.users = this.usersListService.all();
+    this.usersListService.all()
+    .subscribe((result: any) => this.users = result);
   }
 
 }
