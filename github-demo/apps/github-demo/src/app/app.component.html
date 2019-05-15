@@ -1,2 +1,30 @@
-<github-demo-home>
-</github-demo-home>
+
+<mat-toolbar color="primary" class="mat-elevation-z4">
+        <span>
+          <span class="logo">
+            <img src="../assets/images/githubLogo.png" alt="Logo">
+          </span>
+          <span class="title">
+            Github Demo
+          </span>
+        </span>
+        <span class="spacer"></span>
+      </mat-toolbar>
+
+      <mat-sidenav-container>
+        <mat-sidenav #sidenav mode="side" opened class="app-sidenav">
+          <nav>
+            <a mat-button class="nav-link">
+              <mat-icon>
+              <!-- LINK ICON -->
+              </mat-icon>
+              <!-- LINK LABEL -->
+            </a>
+          </nav>
+        </mat-sidenav>
+
+        <div class="app-content">
+                <github-demo-home>
+                </github-demo-home>
+        </div>
+      </mat-sidenav-container>

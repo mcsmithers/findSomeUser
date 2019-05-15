@@ -1,2 +1,18 @@
-<input type="text" placeholder="Search Users"/>
-<button mat-button color="primary">Submit!</button>
+<div class="container">
+    <!-- PROJECTS LIST -->
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            <h4>Type in a username to begin</h4>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Search for a user" value="mcsmithers">
+            </mat-form-field>
+            <mat-card-actions>
+                <button (click)="submit(typedInput)" type="submit" mat-button color="primary">Submit</button>
+            </mat-card-actions>
+        </mat-card-content>
+      </mat-card>
+  </div>

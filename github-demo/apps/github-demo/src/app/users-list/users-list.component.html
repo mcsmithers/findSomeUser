@@ -1,2 +1,28 @@
-<p>Here are your results: </p>
-<github-demo-users></github-demo-users>
+<div class="container">
+    <!-- PROJECTS LIST -->
+    <div class="col-50">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            <h5>Search Results</h5>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-list>
+            <mat-list-item (click)="selectUser(user)"
+            *ngFor="let user of users">
+            <h5 mat-line>
+              {{user.login}}
+            </h5>
+            <h5 mat-line>
+                {{user.gravatar_id}}
+            </h5>
+            <h5 mat-line>
+                {{user.repos_url}}
+            </h5>
+            </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
