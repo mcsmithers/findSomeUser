@@ -1,4 +1,3 @@
-import { UsersModule } from './../users/users.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -10,7 +9,7 @@ import { MaterialModule } from 'libs/material/src/lib/libs-material.module';
   declarations: [UsersListComponent],
   imports: [
     CommonModule,
-    UsersListRoutingModule, UsersModule, MaterialModule
+    UsersListRoutingModule, MaterialModule
   ], exports: [UsersListComponent]
 })
 export class UsersListModule { }

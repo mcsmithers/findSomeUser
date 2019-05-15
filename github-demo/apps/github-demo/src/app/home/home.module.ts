@@ -1,3 +1,4 @@
+import { AppRoutingModule } from '../app-routing.module';
 import { SearchbarModule } from './../searchbar/searchbar.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -11,7 +12,7 @@ import { MaterialModule } from 'libs/material/src/lib/libs-material.module';
   declarations: [HomeComponent],
   imports: [
     CommonModule,
-    HomeRoutingModule, SearchbarModule, UsersListModule, MaterialModule
+    HomeRoutingModule, SearchbarModule, UsersListModule, MaterialModule, AppRoutingModule
   ],
   exports: [HomeComponent]
 })

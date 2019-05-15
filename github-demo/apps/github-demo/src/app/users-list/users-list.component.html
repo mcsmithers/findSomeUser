@@ -15,10 +15,13 @@
               {{user.login}}
             </h5>
             <h5 mat-line>
-                {{user.gravatar_id}}
+                <a href="{{user.url}}">{{user.url}}</a>
             </h5>
             <h5 mat-line>
-                {{user.repos_url}}
+                <a href="user.html_url">{{user.html_url}}</a>
+            </h5>
+            <h5 mat-line>
+                <a href="user.repos_url">{{user.repos_url}}</a>
             </h5>
             </mat-list-item>
           </mat-list>
