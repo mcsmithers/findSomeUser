@@ -21,7 +21,7 @@ export class UsersListComponent implements OnInit {
     console.log('looking for user... ', user);
   }
 
-  getUsers() {
+  getUsers(): void {
     this.usersListService.getAllUsers()
     .subscribe((result: any) => this.users = result);
   }

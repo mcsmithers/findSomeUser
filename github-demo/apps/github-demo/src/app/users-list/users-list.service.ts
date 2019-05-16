@@ -10,7 +10,7 @@ import { Users } from './users-list';  // You can use this with the mock data
 
 export class UsersListService {
 
-  baseUrl = 'https://api.github.com/search/users?q=';
+  baseUrl = 'https://api.github.com/search/users';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -23,9 +23,8 @@ export class UsersListService {
   searchUsers(term: string): Observable<Users[]>{
     term=term.trim();
 
-    const options = term?
-    { params: new HttpParams().set('username', term) } :{};
-
+    const options = term ?
+    { params: new HttpParams().set('q', term) } : {};
     return this.httpClient.get<Users[]>(this.baseUrl, options)
   }
 

@@ -12,7 +12,7 @@
               <input matInput #userName>
           </mat-form-field>
           <mat-card-actions>
-              <button (click)="searchUsers(userName.value)" type="submit" mat-button color="primary">Submit</button>
+              <button (click)="search(userName.value)" type="submit" mat-button color="primary">Submit</button>
           </mat-card-actions>
       </mat-card-content>
     </div>
@@ -28,7 +28,7 @@
         </mat-card-header>
         <mat-card-content>
           <mat-list>
-            <!-- <mat-list-item (click)="selectUser(user)"
+            <mat-list-item (click)="selectUser(user)"
             *ngFor="let user of users">
             <h5 mat-line>
               {{user.login}}
@@ -42,7 +42,7 @@
             <h5 mat-line>
                 <a href="user.repos_url">{{user.repos_url}}</a>
             </h5>
-            </mat-list-item> -->
+            </mat-list-item>
           </mat-list>
         </mat-card-content>
       </mat-card>
