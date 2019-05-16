@@ -9,7 +9,11 @@ For styling, [Angular Material](https://material.angular.io/) was used.  It's de
 
 This has has been built in Angular using their [cli](https://cli.angular.io/) and was generated using [Nx](https://nx.dev).  Having a generator helps since you can easily create the needed files and have the imports and other essentials ready to use,so you can focus your development time on code with some automated assistance.  
 
-[Cypress](https://www.cypress.io/) is used for e2e testing so you can have easy-to-understand tests that test endpoints, front-end element behavior, an so forth.   [Postman](https://www.getpostman.com/) was used to test API calls.  While no authentication is used for the [Github API](https://developer.github.com/v3/), Postman is great for those that require it so calls can be correctly coded.  The tests in this project were automatically generated, but it's easy to write your own with Cypress.
+[Cypress](https://www.cypress.io/) is used for e2e testing so you can have easy-to-understand tests that test endpoints, front-end element behavior, an so forth. The tests in this project were automatically generated, but it's easy to write your own with Cypress. 
+
+[Jest](https://jestjs.io/) is used for unit tests in this project, but you can use others such as Karma in your own projects.  Jest is easy to use and their documentation is detailed, so it's a good place to start for unit testing in JS.
+
+[Postman](https://www.getpostman.com/) was used to test API calls.  While no authentication is used for the [Github API](https://developer.github.com/v3/), Postman is great for those that require it so calls can be correctly coded. 
 
 
 ## Quick Start & Documentation
@@ -34,4 +38,9 @@ Run `ng e2e` to execute the end-to-end tests via [Cypress](http://www.protractor
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+If you want to learn more about Angular, I highly recommend the following resources beacuse they helped me learn enough to get this project done:
+* [Front End Masters Angular Core](https://frontendmasters.com/workshops/angular-core/) was a great resource for me since it introduced the core concepts of Angular to me as well as the tools within it.
+* [Free Code Camp's Angular Course](https://www.youtube.com/watch?v=2OHbjep_WjQ) was good to listen to as well to see how everything fits together.
+* [Angular's Heroes Tutorial](https://angular.io/tutorial) was another good resource when I was trying to work with services and work with a solid example from the creators themselves.
 
