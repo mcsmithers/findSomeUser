@@ -1,35 +1,27 @@
 # Github API Demo
 
-## Instructions
-To begin, first clone the project. After you have a local copy of it, `cd` into the `github-demo` folder.
+## Summary
+This is a project that explores the [Angular](https://angular.io/) framework.  Angular uses [TypeScript](https://www.typescriptlang.org/) which is similar to JavaScript, but it has strict typing and is object-oriented.  It allows for application to grow and become easier to maintain.  
 
-This project was generated using [Nx](https://nx.dev).
+Angular is one of the first popular Javascript frameworks.  Originally, it introduced binding components so that they could change.  Over time, Angular has evolved to have a robust cli that improves on its original iterations by having generators and monitoring state.  Components are still a major part of Angular, but instead of doing the MVC way of thinking that was originally present, it's more built so applications can have different modules and components with different jobs in each one such as services to make API requests and then modules to change update the components.  
 
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png" width="450"></p>
+For styling, [Angular Material](https://material.angular.io/) was used.  It's developed by Google like Angular.  It's a nice styling framework that works similar to Bootstrap, but with a [grid](https://cssreference.io/css-grid/) in mind.  It also has built-in assets such as colors that are coordinated by designers to work well together. To understand how grid works, I highly recommend reading the [guide](https://css-tricks.com/snippets/css/complete-guide-grid/) to it from CSS Tricks in order to see how Material works.
 
-🔎 **Nx is a set of Angular CLI power-ups for modern development.**
+This has has been built in Angular using their [cli](https://cli.angular.io/) and was generated using [Nx](https://nx.dev).  Having a generator helps since you can easily create the needed files and have the imports and other essentials ready to use,so you can focus your development time on code with some automated assistance.  
+
+[Cypress](https://www.cypress.io/) is used for e2e testing so you can have easy-to-understand tests that test endpoints, front-end element behavior, an so forth.   [Postman](https://www.getpostman.com/) was used to test API calls.  While no authentication is used for the [Github API](https://developer.github.com/v3/), Postman is great for those that require it so calls can be correctly coded.  The tests in this project were automatically generated, but it's easy to write your own with Cypress.
+
 
 ## Quick Start & Documentation
 
-[30-minute video showing all Nx features](https://nx.dev/getting-started/what-is-nx)
+### Development server
+To begin, first clone the project. After you have a local copy of it, `cd` into the `github-demo` folder.  
 
-[Interactive tutorial](https://nx.dev/tutorial/01-create-application)
+Run `ng serve github-demo` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload for any changes in the code.
 
-## Generate your first application
+### Build
 
-Run `ng g app myapp` to generate an application. When using Nx, you can create multiple applications and libraries in the same CLI workspace.
-
-## Development server
-
-Run `ng serve myapp` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name --project=myapp` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build myapp` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `ng build github-demo` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
 
