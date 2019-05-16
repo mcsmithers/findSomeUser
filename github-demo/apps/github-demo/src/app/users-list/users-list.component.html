@@ -1,25 +1,25 @@
 <div class="container">
   <!--SEARCH AREA -->
     <mat-card>
-      <div class="col-50">
+      <div class="col-100">
       <mat-card-header>
         <mat-card-title>
           <h4>Type in a username to begin</h4>
         </mat-card-title>
       </mat-card-header>
       <mat-card-content>
-          <mat-form-field class="example-full-width">
-              <input matInput #userName>
-          </mat-form-field>
-          <mat-card-actions>
-              <button (click)="search(userName.value)" type="submit" mat-button color="primary">Submit</button>
-          </mat-card-actions>
+        <mat-form-field class="example-full-width">
+            <input matInput #userName>
+        </mat-form-field>
+        <mat-card-actions>
+            <button (click)="search(userName.value)" type="submit" mat-button color="primary">Submit</button>
+        </mat-card-actions>
       </mat-card-content>
     </div>
     </mat-card>
 
     <!-- USERS LIST -->
-    <div class="col-50">
+    <div class="col-70">
       <mat-card>
         <mat-card-header>
           <mat-card-title>
@@ -27,8 +27,8 @@
           </mat-card-title>
         </mat-card-header>
         <mat-card-content>
-          <mat-list>
-            <mat-list-item (click)="selectUser(user)"
+          <mat-list class="users">
+            <mat-list-item
             *ngFor="let user of users">
             <h5 mat-line>
               {{user.login}}

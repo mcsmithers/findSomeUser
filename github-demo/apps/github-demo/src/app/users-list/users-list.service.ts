@@ -26,6 +26,7 @@ export class UsersListService {
     const options = term ?
     { params: new HttpParams().set('q', term) } : {};
     return this.httpClient.get<Users[]>(this.baseUrl, options)
+    .pipe()
   }
 
 }
