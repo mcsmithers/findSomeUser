@@ -4,11 +4,11 @@
       <div class="col-100">
       <mat-card-header>
         <mat-card-title>
-          <h4>Type in a username to begin</h4>
+          <h4 mat-line>Type in a username to begin</h4>
         </mat-card-title>
       </mat-card-header>
       <mat-card-content>
-        <mat-form-field class="example-full-width">
+        <mat-form-field>
             <input matInput #userName>
         </mat-form-field>
         <mat-card-actions>
@@ -16,18 +16,17 @@
         </mat-card-actions>
       </mat-card-content>
     </div>
-    </mat-card>
+
 
     <!-- USERS LIST -->
     <div class="col-70">
-      <mat-card>
         <mat-card-header>
           <mat-card-title>
-            <h5>Search Results</h5>
+            <h5 mat-line>Search Results</h5>
           </mat-card-title>
         </mat-card-header>
         <mat-card-content>
-          <mat-list class="users">
+          <mat-list>
             <mat-list-item
             *ngFor="let user of users">
             <h5 mat-line>
@@ -37,15 +36,15 @@
                 <a href="{{user.url}}">{{user.url}}</a>
             </h5>
             <h5 mat-line>
-                <a href="user.html_url">{{user.html_url}}</a>
+                <a href="{{user.html_url}}">{{user.html_url}}</a>
             </h5>
             <h5 mat-line>
-                <a href="user.repos_url">{{user.repos_url}}</a>
+                <a href="{{user.repos_url}}">{{user.repos_url}}</a>
             </h5>
             </mat-list-item>
           </mat-list>
         </mat-card-content>
-      </mat-card>
       </div>
+    </mat-card>
     </div>
 

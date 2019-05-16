@@ -13,19 +13,15 @@ export class UsersListComponent implements OnInit {
   constructor(private usersListService: UsersListService) { }
 
   ngOnInit() {
-    this.getUsers();
-  }
-
-  getUsers(): void {
-    this.usersListService.getAllUsers()
-    .subscribe((result: any) => this.users = result);
   }
 
   search(searchTerm: string) {
     if(searchTerm) {
       console.log('looking for user... ', searchTerm);
-      this.usersListService.searchUsers(searchTerm).subscribe(users => this.users = users);
-      console.log(this.users)
+      this.usersListService.searchUsers(searchTerm).subscribe(users => {
+        this.users = users['items'];
+        console.log("users looks like...", this.users);
+      });
     }
   }
 
