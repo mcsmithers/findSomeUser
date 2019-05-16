@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./users-list.component.css']
 })
 export class UsersListComponent implements OnInit {
-  selectedUser: Users;
+  selectedUser: Users[];
   users: Users[];
 
   constructor(private usersListService: UsersListService) { }
@@ -17,18 +17,19 @@ export class UsersListComponent implements OnInit {
     this.getUsers();
   }
 
-  selectUser(user) {
-    this.selectedUser= user;
-    console.log(user);
-  }
-
   searchUsers(user){
     console.log('looking for user... ', user);
   }
 
   getUsers() {
-    this.usersListService.all()
+    this.usersListService.getAllUsers()
     .subscribe((result: any) => this.users = result);
+  }
+
+  search(searchTerm: string) {
+    if(searchTerm) {
+      this.usersListService.searchUsers(searchTerm).subscribe(users => this.users = users);
+    }
   }
 
 }

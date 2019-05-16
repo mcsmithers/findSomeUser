@@ -1,21 +1,34 @@
-import { HttpClient} from '@angular/common/http';
+import { HttpClient, HttpParams} from '@angular/common/http';
 import { Injectable, Component } from '@angular/core';
-// import { Users } from './users-list';  // You can use this with the mock data
+import { Observable } from 'rxjs';
+import { Users } from './users-list';  // You can use this with the mock data
 
-const BASE_URL = 'https://api.github.com/search/users';
-const queryUrl = '?q=mcmithers';
+
 @Injectable({
   providedIn: 'root'
 })
 
 export class UsersListService {
-  model = 'users';
+
+  baseUrl = 'https://api.github.com/search/users?q=';
 
   constructor(private httpClient: HttpClient) { }
 
-  all() {
-    return this.httpClient.get(`${BASE_URL + queryUrl}${this.model}`);
+   /** GET heroes from the server */
+   getAllUsers (): Observable<Users[]> {
+    return this.httpClient.get<Users[]>(this.baseUrl)
+      .pipe();
   }
+
+  searchUsers(term: string): Observable<Users[]>{
+    term=term.trim();
+
+    const options = term?
+    { params: new HttpParams().set('username', term) } :{};
+
+    return this.httpClient.get<Users[]>(this.baseUrl, options)
+  }
+
 }
 
   // THIS IS MOCK DATA FOR LOCAL TESTING THAT CAN BE PUT INTO USERS

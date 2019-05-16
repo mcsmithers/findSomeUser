@@ -9,10 +9,10 @@
       </mat-card-header>
       <mat-card-content>
           <mat-form-field class="example-full-width">
-              <input matInput placeholder="Search for a user" value="username">
+              <input matInput #userName>
           </mat-form-field>
           <mat-card-actions>
-              <button (click)="searchUsers(user)" type="submit" mat-button color="primary">Submit</button>
+              <button (click)="searchUsers(userName.value)" type="submit" mat-button color="primary">Submit</button>
           </mat-card-actions>
       </mat-card-content>
     </div>
