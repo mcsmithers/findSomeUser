@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, BrowserAnimationsModule,
-    HttpClientModule, MaterialModule, HomeModule, AppRoutingModule],
+    HttpClientModule, MaterialModule, HomeModule],
   providers: [],
   bootstrap: [AppComponent]
 })
