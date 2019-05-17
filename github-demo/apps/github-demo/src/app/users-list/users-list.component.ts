@@ -1,4 +1,4 @@
-import { UsersListService, Users } from '../../../../../libs/core-data/src/index';
+import { UsersListService } from '../../../../../libs/core-data/src/index';
 import { Component, OnInit } from '@angular/core';
 
 
