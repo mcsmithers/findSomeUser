@@ -1,6 +1,5 @@
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { SearchbarModule } from './searchbar/searchbar.module';
 import { HomeComponent } from './home/home.component';
 import { HomeModule } from './home/home.module';
 import { MaterialModule } from './../../../../libs/material/src/lib/libs-material.module';
